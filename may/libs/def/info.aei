@@ -1,0 +1,12 @@
+comment = {
+  nameはライブラリの名前です。　結果では"名前library"になります。
+  versionはライブラリのバージョンです。
+  
+}
+
+import info;
+
+info {
+  name = "template" + library; 
+  version = 0.00.1;
+}
