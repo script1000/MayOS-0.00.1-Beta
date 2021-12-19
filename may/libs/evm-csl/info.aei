@@ -1,0 +1,10 @@
+text mayUsr = mayUsrId{01001101-01100001-01111001-01001111-01010011};
+
+import cloud.mayUsr.info;
+
+info {
+  name = "EVM Console " + library; 
+  version = 0.00.1;
+  id = "lib.id.487625"; // https://scratch.mit.edu/projects/615599564/
+  engine = "may.egn.mayUsr.ae";
+}
