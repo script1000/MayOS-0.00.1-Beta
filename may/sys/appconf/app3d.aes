@@ -1,0 +1,22 @@
+@class <aes.aegledit>
+
+import cloud.csl.*;
+import cloud.app.*, .app3d.*;
+
+application_runtime app3d {
+    info app3d {
+        title = "Application 3D Runtime",
+        author = "MayOS Inc",
+        requires = this.import_content,
+        engine = "AEScript.MayOS_engine.3Dapp";
+    }
+
+    loopclass checkFrame(tick, target) {
+        dot(x, y, color.r, color.b, color.g);
+    }
+
+    class 3dsquare(x.pos,y.pos,x.scale,y.scale,angle,color) {
+        spawn(this.varText);
+        checkFrame(5, this);
+    }
+}

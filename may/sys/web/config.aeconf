@@ -1,0 +1,12 @@
+[Normal]
+http-base = "http://";
+https-base = "https://";
+ftp-base = "ftp://";
+
+[AE.svr]
+folder aesvr {
+    aesvr-base = "aesvr://";
+    aesvr-privateBase = "aesvr://pris.vr/";
+    aesvr-mayosBase = "aesvr://mayos.main/";
+    aesvr-serviceBase = "aesvr://mayos.service/";
+}

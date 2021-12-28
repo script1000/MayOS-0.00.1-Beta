@@ -1,0 +1,53 @@
+export(sys mayos.explorer.trashbin.function) {
+
+    id trashId = this.func.trashId;
+    id trashName = Trashbin;
+    info file = {
+        file logExporter = new.file(name, )
+        text name = this.bootDrive/info/log/trashbin/t -output <trashbin.reason>.log;
+        text command = new.execution[
+            if(output = completed) {
+                data = new.data{
+                    [LOG] <time.date>, trashbin is executed <executed.files.howmany> files.
+                    here the result:
+                    Status: status.trashbin.COMPLETED
+                    writeText[text.files.names];
+                }
+            }
+            if(output = errorOccured) {
+                data = new.data{
+                    [LOG] <time.date>, trashbin is executed <executed.files.howmany> files.
+                    here the result:
+                    Status: status.trashbin.ERROROCCURED
+                    Reason: writeText[text.status.reason];
+                    writeText[text.files.names];
+                }
+            }
+            if(output = deleted) {
+                data = new.data{
+                    [LOG] <time.date>, trashbin is executed <executed.files.howmany> files.
+                    here the result:
+                    Status: status.trashbin.DELETED
+                    writeText[text.files.names];
+                }
+            }
+        ]
+    }
+
+    function trashId {
+        if(output = completed AND deleted) {
+            this.result = 1;
+            this.output = output + 1;
+        }
+    }
+
+    function onButtonClicked(button.remove) {
+        url trashbinFileTransfer = maysvr://private.svr/os/mayos/file/trashbin/removedFiles/;
+
+        transfer(trashbin.file trashbinFileTransfer);
+    }
+
+    function onButtonClicked(button.reinsert) {
+        transfer(trashbin.file trashbin.file.originalpath);
+    }
+}

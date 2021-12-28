@@ -1,0 +1,28 @@
+export(sys mayos.web.address.svr) {
+    url baseSvr = maysvr://mayos.service/<svrId>/;
+    info file = {
+        folderpath = new.path{
+            command(may.mkPth[
+                .src
+                .src.data
+                .src.data.index.html{
+                    generate(temp.svr.index);
+                }
+                .src.data.config.aesys{
+                    name=(mayOs server);
+                    title=(mayOs server);
+                }
+            ])
+        }
+    }
+
+    function handler {
+        handle js = code/js;
+        handle html = code/html;
+        handle css = code/css;
+        handle php = code/php;
+        handle scss = code/scss;
+        handle xml = code/xml;
+        handle md = code/md;
+    }
+}
