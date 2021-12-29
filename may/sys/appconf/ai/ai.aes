@@ -6,8 +6,27 @@ export(sys mayos.api.ai.*) {
         IF(loadAPI.result = 1) {ready();}
     })
     api TARGETAPI = {
-        serverLoad(aesvr://pris.vr/id:mayos.service/api/id:ai-api/src/);
+        serverLoad(aesvr://pris.vr/id:mayos.service/api/id:ai-api/src/) {
+            AI();
+        };
     }
 
     url svr = aesvr://pris.vr/id:mayos.service/api/id:ai-api/svr/, 
+    function runAI() {
+        loadAPI(ApiLoader);
+    }
+    function setAIState(StateId, state, value) {
+        url targetURL = "aesvr://pris.vr/id:mayos.service/api/id:" + var.StateId + "/state/api.aestt";
+        checkStateURL(targetURL);
+        if(checkStateURL.targetURL.isExist = true) {
+            edit(targetURL, text{
+                [Info]
+                name=.State
+                EntityId=ae/state
+                [State]
+                <state>=<value>
+            });
+        }
+    }
+    
 }
