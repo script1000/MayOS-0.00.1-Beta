@@ -1,0 +1,13 @@
+export(sys mayos.api.ai.*) {
+    ApiLoader = command("api -lib=api/calc.self.ml.ai", {
+        API = $MAYOS-APIAI.TARGETAPI;
+        LOADAPI(T.1);
+        IF(loadAPI.result = 0) {log(error);}
+        IF(loadAPI.result = 1) {ready();}
+    })
+    api TARGETAPI = {
+        serverLoad(aesvr://pris.vr/id:mayos.service/api/id:ai-api/src/);
+    }
+
+    url svr = aesvr://pris.vr/id:mayos.service/api/id:ai-api/svr/, 
+}

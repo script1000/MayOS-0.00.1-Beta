@@ -1,0 +1,8 @@
+import cloud.web.*;
+
+export(sys mayos.web.function.error) {
+    if(errorHappened = true) {
+        log(error.id);
+        show(error.message);
+    }
+}
