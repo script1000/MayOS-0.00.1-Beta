@@ -1,0 +1,6 @@
+aesl {
+    info {
+        name = "LibraryTest";
+        
+    }
+}
