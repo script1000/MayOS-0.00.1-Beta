@@ -1,22 +1,23 @@
-export this, mayos.explorer.fileextension.execute;
-file.script {
-    aet = AE Tutorial;
-    aes = AE Script;
-    aep = AE Patch;
-    aese = AE Settings;
-    aeg = AE Generation;
-    aeo = AE Operator;
-    aest = AE Storage;
-    aecst = AE Client Storage;
-    aec = AE Cache;
-    aesds = AE Special Data Script;
-    dcex = Data Cache Extension;
-    ast = Asset Image;
-    aeim = AE Image;
-    aei = AE Infomation;
-    aesys = AE System Data;
-    aeconf = AE Config Data;
-    aedll = AE DLL;
-    aegr = AE Graphics;
-    aesx = AE System Extended;
+export(this, mayos.explorer.fileextension.execute) {
+    ae.file.script {
+        aet = AE Tutorial;
+        aes = AE Script;
+        aep = AE Patch;
+        aese = AE Settings;
+        aeg = AE Generation;
+        aeo = AE Operator;
+        aest = AE Storage;
+        aecst = AE Client Storage;
+        aec = AE Cache;
+        aesds = AE Special Data Script;
+        dcex = Data Cache Extension;
+        ast = Asset Image;
+        aeim = AE Image;
+        aei = AE Infomation;
+        aesys = AE System Data;
+        aeconf = AE Config Data;
+        aedll = AE DLL;
+        aegr = AE Graphics;
+        aesx = AE System Extended;
+    }
 }

@@ -1,0 +1,17 @@
+text mayUsr = mayUsrId{01001101-01100001-01111001-01001111-01010011};
+
+import cloud.mayUsr.info;
+
+info {
+  name = "Streaming " + library; 
+  version = 0.00.5;
+  id = "lib.id.str47636"; // https://scratch.mit.edu/projects/615599564/
+  pathId = "str";
+  engine = "may.egn.mayUsr.ae";
+  console = "may.csl.mayUsr.str";
+}
+
+execute {
+  main = main.aels;
+  srcfolder = <data:evm/src/>;
+}

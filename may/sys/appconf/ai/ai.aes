@@ -16,7 +16,7 @@ export(sys mayos.api.ai.*) {
         loadAPI(ApiLoader);
     }
     function setAIState(StateId, state, value) {
-        url targetURL = "aesvr://pris.vr/id:mayos.service/api/id:" + var.StateId + "/state/api.aestt";
+        url targetURL = "aesvr://pris.vr/id:mayos.service/api/id:ai-api/" + var.StateId + "/state/api.aestt";
         checkStateURL(targetURL);
         if(checkStateURL.targetURL.isExist = true) {
             edit(targetURL, text{

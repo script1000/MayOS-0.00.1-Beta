@@ -3,10 +3,16 @@ http-base = "http://";
 https-base = "https://";
 ftp-base = "ftp://";
 
-[AE.svr]
+[ae-ptl]
 folder aesvr {
     aesvr-base = "aesvr://";
     aesvr-privateBase = "aesvr://pris.vr/";
     aesvr-mayosBase = "aesvr://mayos.main/";
     aesvr-serviceBase = "aesvr://mayos.service/";
+    aesvr-updateBase = "aesvr://mayos.update/";
+    aesvr-fileBase = "aesvr://mayos.file/";
+}
+folder aep {
+    aep-base = "aep://";
+    aep-system = "aep://system.aepd/";
 }

@@ -1,0 +1,15 @@
+function setStrURL(url) {
+    url streamURL = url;
+    status streamURLs = streamURL:GetState();
+
+    show(streamURL:GetAuthGUI);
+    if(streamURLs.user = streamURL:GetAuthGUI().user) {
+        show(streamURL:GetVideoInfoGUI());
+        setVideo(streamURL:GetVideoInfoGUI().info);
+    }
+}
+
+function str() {
+    startCapture_s(setStrURL().video);
+}
+
